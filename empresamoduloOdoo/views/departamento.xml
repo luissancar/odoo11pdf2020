@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="empresa_departamento_action" name="departamento" res_model="empresa.departamento" />
+
+        <record id="empresa_departamento_view_tree" model="ir.ui.view">
+            <field name="name">Lista de departamentos</field>
+            <field name="model">empresa.departamento</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numDep" />
+                    <field name="funcion" />
+                    <field name="planta" />
+                    <field name="piso" />
+                    <field name="numAdm" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="empresa_departamento_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de departamentos</field>
+            <field name="model">empresa.departamento</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="numDep" />
+                    <field name="funcion" />
+                    <field name="planta" />
+                    <field name="piso" />
+                    <field name="numAdm" />
+
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Departamento" id="menu_departamento" action="empresa_departamento_action" parent="menu_lugares" sequence="10"/>
+    </data>
+</odoo>

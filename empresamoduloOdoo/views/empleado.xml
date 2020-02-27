@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="empresa_empleado_action" name="empleado" res_model="empresa.empleado" />
+
+        <record id="empresa_empleado_view_tree" model="ir.ui.view">
+            <field name="name">Lista de empleados</field>
+            <field name="model">empresa.empleado</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numEmpleado" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="edad" />
+                    <field name="fechaEntrada" />
+                    <field name="salario" />
+                    <field name="numGer"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="empresa_empleado_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de empleados</field>
+            <field name="model">empresa.empleado</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="numEmpleado" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="edad" />
+                    <field name="fechaEntrada" />
+                    <field name="salario" />
+                    <field name="numGer"/>
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Empresas" id="menu_empresa" sequence="10" />
+        <menuitem name="Trabajadores" id="menu_trabajadores" parent="menu_empresa" sequence="10"/>
+        <menuitem name="Lugares" id="menu_lugares" parent="menu_empresa" sequence="10"/>
+        <menuitem name="Empleado" id="menu_empleado" action="empresa_empleado_action" parent="menu_trabajadores" sequence="10"/>
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <report
+        id="report_empleado_card"
+        model="empresa.empleado"
+        string="Report Empleado"
+        report_type="qweb-pdf"
+        name="empresamoduloOdoo.report_empleado"
+        file="empresamoduloOdoo.report_empleado"
+    />
+</odoo>

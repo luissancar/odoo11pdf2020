@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="empresa_localizacion_action" name="localizacion" res_model="empresa.localizacion" />
+        <record id="empresa_localizacion_view_tree" model="ir.ui.view">
+            <field name="name">Lista de localizaciones</field>
+            <field name="model">empresa.localizacion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pais" />
+                    <field name="comunidadAutonoma" />
+                    <field name="municipio" />
+                    <field name="postal" />
+                    <field name="calle" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="empresa_localizacion_view_search" model="ir.ui.view">
+           <field name="name">Lista de localizaciones</field>
+            <field name="model">empresa.localizacion</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="pais" />
+                    <field name="comunidadAutonoma" />
+                    <field name="municipio" />
+                    <field name="postal" />
+                    <field name="calle" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Localizacion" id="menu_localizacion" action="empresa_localizacion_action" parent="menu_lugares" sequence="10"/>
+    </data>
+</odoo>

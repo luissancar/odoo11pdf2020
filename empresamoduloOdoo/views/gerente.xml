@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="empresa_gerente_action" name="gerente" res_model="empresa.gerente" />
+
+        <record id="empresa_gerenteview_tree" model="ir.ui.view">
+            <field name="name">Lista de gerentes</field>
+            <field name="model">empresa.gerente</field>
+            <field name="arch" type="xml">
+                <tree>
+                     <field name="numGer" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="salario" />
+                    <field name="numDep" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="empresa_gerente_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de gerentes</field>
+            <field name="model">empresa.gerente</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="numGer" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="salario" />
+                    <field name="numDep" />
+
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Gerente" id="menu_gerente" action="empresa_gerente_action" parent="menu_trabajadores" sequence="10"/>
+    </data>
+</odoo>
