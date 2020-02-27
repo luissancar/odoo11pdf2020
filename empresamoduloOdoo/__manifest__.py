@@ -1,7 +1,7 @@
 {
     'name': 'EmpresaPDF',
     'description': 'BD de una empresa PDF.',
-    'author': 'Daniel Vílchez Narváez',
+    'author': 'ies',
     'application': True,
     'data': ['./views/empleado.xml',
              './views/departamento.xml',
