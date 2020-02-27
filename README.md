@@ -1,1 +1,1 @@
-# odoo11pdf2020
+# Ejemplo creación pdf en odoo 11.
